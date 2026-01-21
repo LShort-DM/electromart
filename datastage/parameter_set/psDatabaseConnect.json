@@ -1,0 +1,62 @@
+{
+  "parameter_set" : {
+    "name" : "psDatabaseConnect",
+    "description" : "",
+    "parameters" : [ {
+      "name" : "DATASRC",
+      "prompt" : "Data Source Name",
+      "type" : "string",
+      "value" : ""
+    }, {
+      "name" : "USERID",
+      "prompt" : "User Name",
+      "type" : "string",
+      "value" : ""
+    }, {
+      "name" : "PASSWORD",
+      "prompt" : "Password",
+      "type" : "string",
+      "value" : ""
+    }, {
+      "name" : "hostname",
+      "description" : "Automatically generated parameter referenced in imported assets",
+      "prompt" : "hostname (auto-generated)",
+      "type" : "string",
+      "value" : ""
+    }, {
+      "name" : "port",
+      "description" : "Automatically generated parameter referenced in imported assets",
+      "prompt" : "port (auto-generated)",
+      "type" : "int64",
+      "value" : 50000
+    }, {
+      "name" : "database",
+      "description" : "Automatically generated parameter referenced in imported assets",
+      "prompt" : "database (auto-generated)",
+      "type" : "string",
+      "value" : ""
+    } ],
+    "value_sets" : [ {
+      "values" : [ {
+        "name" : "DATASRC",
+        "value" : "postgres-demo"
+      }, {
+        "name" : "USERID",
+        "value" : "postgres"
+      }, {
+        "name" : "PASSWORD",
+        "value" : "3MhmgX&$cgBbJ$V6"
+      }, {
+        "name" : "hostname",
+        "value" : "postgres-demo.ct2nfr0hc9uq.ap-southeast-2.rds.amazonaws.com"
+      }, {
+        "name" : "port",
+        "value" : 5432
+      }, {
+        "name" : "database",
+        "value" : "demo"
+      } ],
+      "name" : "postgresSQL"
+    } ]
+  }
+}

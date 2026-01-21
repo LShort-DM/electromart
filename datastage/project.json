@@ -1,12 +1,12 @@
 {
   "project" : "",
   "projectId" : "170c1574-7608-44a2-a24a-6a817ec1293c",
-  "commit-time" : "2026-01-21T06:55:47Z",
-  "commit-sha" : "b8bb13a7996952efdaff5939a3bf4e8f721404e0",
+  "commit-time" : "2026-01-21T06:56:45Z",
+  "commit-sha" : "4b30b166cd6e33f682b190c1541b7d7ab5b7150e",
   "readme" : {
     "name" : "DataStage-README.json",
-    "sha" : "8cc96c1a6a083f3ebc1cd8531e6d4e362fcde90c",
-    "size" : 892,
+    "sha" : "cd06e31acac28e0b6b6d8518a21f3c81c02729da",
+    "size" : 984,
     "asset_type" : "readme",
     "resource_key" : "",
     "iam_id" : "",
@@ -17,6 +17,18 @@
   "jobs" : { },
   "connection" : { },
   "parameter_set" : {
+    "psDatabaseConnect" : {
+      "id" : "a2df9496-18f2-452a-bef2-0cf8bf90ce53",
+      "name" : "psDatabaseConnect",
+      "sha" : "2966d601498085fe11b95a4286a890979e7cdcda",
+      "size" : 1624,
+      "created_at" : "2026-01-21T16:32:14Z",
+      "updated_at" : "1769013134249",
+      "asset_type" : "parameter_set",
+      "resource_key" : "",
+      "iam_id" : "icp4d-dev",
+      "git_user" : "LShort-DM"
+    },
     "psGlobal" : {
       "id" : "76317b55-f32c-46c1-8986-34930a448f60",
       "name" : "psGlobal",
