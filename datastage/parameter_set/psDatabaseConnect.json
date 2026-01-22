@@ -3,60 +3,36 @@
     "name" : "psDatabaseConnect",
     "description" : "",
     "parameters" : [ {
-      "name" : "DATASRC",
-      "prompt" : "Data Source Name",
-      "type" : "string",
-      "value" : ""
-    }, {
-      "name" : "USERID",
+      "name" : "userid",
+      "description" : "",
       "prompt" : "User Name",
       "type" : "string",
-      "value" : ""
+      "value" : "postgres"
     }, {
-      "name" : "PASSWORD",
+      "name" : "password",
+      "description" : "",
       "prompt" : "Password",
       "type" : "string",
-      "value" : ""
+      "value" : "_i3W!7gL7E3.cyvP"
     }, {
       "name" : "hostname",
-      "description" : "Automatically generated parameter referenced in imported assets",
-      "prompt" : "hostname (auto-generated)",
+      "description" : "",
+      "prompt" : "hostname",
       "type" : "string",
-      "value" : ""
+      "value" : "postgres-dev.cohja0w6kdrg.ap-southeast-2.rds.amazonaws.com"
     }, {
       "name" : "port",
-      "description" : "Automatically generated parameter referenced in imported assets",
-      "prompt" : "port (auto-generated)",
+      "description" : "",
+      "prompt" : "port",
       "type" : "int64",
-      "value" : 50000
+      "value" : 5432
     }, {
       "name" : "database",
-      "description" : "Automatically generated parameter referenced in imported assets",
-      "prompt" : "database (auto-generated)",
+      "description" : "",
+      "prompt" : "database",
       "type" : "string",
-      "value" : ""
+      "value" : "dev"
     } ],
-    "value_sets" : [ {
-      "values" : [ {
-        "name" : "DATASRC",
-        "value" : "postgres-demo"
-      }, {
-        "name" : "USERID",
-        "value" : "postgres"
-      }, {
-        "name" : "PASSWORD",
-        "value" : "3MhmgX&$cgBbJ$V6"
-      }, {
-        "name" : "hostname",
-        "value" : "postgres-demo.ct2nfr0hc9uq.ap-southeast-2.rds.amazonaws.com"
-      }, {
-        "name" : "port",
-        "value" : 5432
-      }, {
-        "name" : "database",
-        "value" : "demo"
-      } ],
-      "name" : "postgresSQL"
-    } ]
+    "value_sets" : [ ]
   }
 }
