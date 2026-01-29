@@ -1,0 +1,38 @@
+{
+  "parameter_set" : {
+    "name" : "psDatabaseConnect",
+    "description" : "",
+    "parameters" : [ {
+      "name" : "userid",
+      "description" : "",
+      "prompt" : "User Name",
+      "type" : "string",
+      "value" : "datastage_user"
+    }, {
+      "name" : "password",
+      "description" : "",
+      "prompt" : "Password",
+      "type" : "encrypted",
+      "value" : "{dsmenc}zyqj71FxDHT1ZfosZz9LQw=="
+    }, {
+      "name" : "hostname",
+      "description" : "",
+      "prompt" : "hostname",
+      "type" : "string",
+      "value" : "postgres-dev.cohja0w6kdrg.ap-southeast-2.rds.amazonaws.com"
+    }, {
+      "name" : "port",
+      "description" : "",
+      "prompt" : "port",
+      "type" : "int64",
+      "value" : 5432
+    }, {
+      "name" : "database",
+      "description" : "",
+      "prompt" : "database",
+      "type" : "string",
+      "value" : "dev_cp4d"
+    } ],
+    "value_sets" : [ ]
+  }
+}

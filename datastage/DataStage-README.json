@@ -1,0 +1,45 @@
+{
+  "project" : "electromart",
+  "projectId" : "170c1574-7608-44a2-a24a-6a817ec1293c",
+  "created_by" : "admin",
+  "created_at" : "2026-01-29T00:55:38.233730916Z",
+  "environment" : "cp4d",
+  "services_info" : [ {
+    "name" : "ds-canvas",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-flows",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-codegen",
+    "version" : "520.0.16"
+  }, {
+    "name" : "ds-flow-runtime",
+    "version" : "520.0.3"
+  }, {
+    "name" : "ds-migration",
+    "version" : "520.0.3"
+  }, {
+    "name" : "DSAssets",
+    "version" : "520.0.6"
+  }, {
+    "name" : "ds-cas-lite",
+    "version" : "520.0.3"
+  }, {
+    "name" : "ds-px-runtime",
+    "version" : "520.0.17"
+  }, {
+    "name" : "qs-ruleset",
+    "version" : "520.0.3"
+  } ],
+  "assets" : [ {
+    "name" : "psDatabaseConnect.",
+    "type" : "parameter_set",
+    "location" : ""
+  }, {
+    "name" : "psGlobal.",
+    "type" : "parameter_set",
+    "location" : ""
+  } ],
+  "flow_job_mapping" : [ ]
+}
