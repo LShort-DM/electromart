@@ -2,7 +2,7 @@
   "project" : "electromart",
   "projectId" : "170c1574-7608-44a2-a24a-6a817ec1293c",
   "created_by" : "admin",
-  "created_at" : "2026-01-29T00:55:38.233730916Z",
+  "created_at" : "2026-01-29T00:56:52.490760975Z",
   "environment" : "cp4d",
   "services_info" : [ {
     "name" : "ds-canvas",
@@ -39,6 +39,14 @@
   }, {
     "name" : "psGlobal.",
     "type" : "parameter_set",
+    "location" : ""
+  }, {
+    "name" : "TxFactFinanceDs.",
+    "type" : "data_intg_flow",
+    "location" : ""
+  }, {
+    "name" : "TxFactFinanceDs.DataStage job.",
+    "type" : "job",
     "location" : ""
   } ],
   "flow_job_mapping" : [ ]
