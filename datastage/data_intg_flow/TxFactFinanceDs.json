@@ -151,7 +151,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "linkStyle__runMetricsLinkProcessingStyle___hPvbc"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "stgfinanace",
@@ -218,7 +218,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "linkStyle__runMetricsLinkProcessingStyle___hPvbc"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "factsales",
@@ -358,19 +358,22 @@
               "min" : 1,
               "max" : 2147483647
             }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
           }
         },
         "schema_ref" : "f8595aae-1148-401f-9082-f40eafc1c93f",
         "parameters" : {
           "Reject" : false,
+          "outputName" : "factfinance",
           "RowLimit" : 0,
           "valueDerivation" : [ {
             "parsedExpression" : "svProfit",
             "stageVars" : "svProfit",
             "columnName" : "profit"
           }, {
-            "parsedExpression" : "DFloatToDecimal(svProfitPercentage,'round_inf')",
-            "stageVars" : "svProfitPercentage",
+            "parsedExpression" : "DFloatToDecimal(svProfitPercentage,'floor')",
             "columnName" : "profitpercentage"
           } ],
           "buf_mode" : "default"
@@ -422,7 +425,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "linkStyle__runMetricsLinkProcessingStyle___hPvbc"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "finance_sales",
@@ -441,6 +444,8 @@
         },
         "schema_ref" : "1ef2f86d-79c6-4fd0-a492-740c95c7f8bb",
         "parameters" : {
+          "keyColsPart" : [ ],
+          "perform_sort" : false,
           "part_coll" : "part_type",
           "runtime_column_propagation" : 0
         }
@@ -471,15 +476,14 @@
           "Scale" : 2,
           "Name" : "svProfit"
         }, {
-          "Precision" : 5,
           "Derivation" : "svProfit / finance_sales.revenue",
           "SqlType" : "DOUBLE",
-          "Scale" : 4,
           "Name" : "svProfitPercentage"
         } ],
         "input_count" : 1,
         "InitialValue" : "1",
-        "BlockSize" : 0,
+        "Triggers" : [ ],
+        "LoopVariables" : [ ],
         "SKKeySourceType" : "file"
       }
     }, {
@@ -541,7 +545,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "linkStyle__runMetricsLinkProcessingStyle___hPvbc"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "factfinance",
@@ -719,7 +723,7 @@
         "execmode" : "default_par"
       }
     } ],
-    "description" : "Short description: Prepare data for load to Finance fact table. Long description: reset instructions:\r\n\r\nset odbc stage name to odbc_Stgfinance                                                           [odbcStgfinance]\r\nset dsFactfinanceds  to Auto                                                                               [Same]\r\nset dataset path  to  /data/ww2/dataset/factfinance.ds                                     [#psGlobal.DatasetDir#/factfinance.ds#]\r\n\r\ntxProfit set profitperecentage derivation from &amp;amp;amp;amp;amp;amp;amp;amp;#39;round_inf&amp;amp;amp;amp;amp;amp;amp;amp;#39;                                      [&amp;amp;amp;amp;amp;amp;amp;amp;#39;floor&amp;amp;amp;amp;amp;amp;amp;amp;#39;]\r\n\r\n",
+    "description" : "Short description: Prepare data for load to Finance fact table. Long description: reset instructions:\r\n\r\nset odbc stage name to odbc_Stgfinance                                                           [odbcStgfinance]\r\nset dsFactfinanceds  to Auto                                                                               [Same]\r\nset dataset path  to  /data/ww2/dataset/factfinance.ds                                     [#psGlobal.DatasetDir#/factfinance.ds#]\r\n\r\ntxProfit set profitperecentage derivation from &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;#39;round_inf&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;#39;                                      [&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;#39;floor&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;#39;]\r\n\r\n",
     "id" : "49b8fc04-37d9-4e98-9341-1de7d62299f5",
     "app_data" : {
       "datastage" : {
@@ -828,10 +832,10 @@
         "is_key" : false,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "stgfinanace.transactionid",
-        "max_length" : 10,
+        "max_length" : 6,
         "is_signed" : true
       },
       "nullable" : true,
@@ -920,10 +924,10 @@
         "is_key" : true,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "factsales.saleskey",
-        "max_length" : 10,
+        "max_length" : 6,
         "is_signed" : true
       },
       "nullable" : false,
@@ -943,10 +947,10 @@
         "is_key" : false,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "factsales.datekey",
-        "max_length" : 10,
+        "max_length" : 6,
         "is_signed" : true
       },
       "nullable" : true,
@@ -966,10 +970,10 @@
         "is_key" : false,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "stgfinanace.salesid",
-        "max_length" : 10,
+        "max_length" : 6,
         "is_signed" : true
       },
       "nullable" : true,
@@ -1115,7 +1119,7 @@
         "is_key" : false,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "finance_sales.transactionid",
         "max_length" : 6,
@@ -1138,7 +1142,7 @@
         "is_key" : false,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "finance_sales.saleskey",
         "max_length" : 6,
@@ -1256,7 +1260,7 @@
         "is_key" : false,
         "min_length" : 0,
         "decimal_scale" : 0,
-        "decimal_precision" : 0,
+        "decimal_precision" : 6,
         "description" : "<none>\r\nSearchable? N ",
         "source_field_id" : "finance_sales.datekey",
         "max_length" : 6,
@@ -1288,7 +1292,7 @@
       "type" : "double",
       "app_data" : {
         "time_scale" : 0,
-        "odbc_type" : "NUMERIC",
+        "odbc_type" : "DECIMAL",
         "array_handling" : 0,
         "is_unicode_string" : false,
         "type_code" : "DECIMAL"
